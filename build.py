@@ -12,9 +12,9 @@ LOCALES = {
         "path": "/", "lang": "en", "label": "English",
         "title": "JLPT Pocket Word & HSK Pocket Word | Pocket Word",
         "description": "Explore JLPT Pocket Word for Japanese and HSK Pocket Word for Chinese. Study vocabulary by level with quick quizzes, review, pronunciation, and daily practice.",
-        "eyebrow": "Language learning, one word at a time",
-        "h1": "Build a language habit that sticks.",
-        "lead": "Pocket Word makes Japanese and Chinese vocabulary easier to practice in short, focused sessions. Choose a level, learn words, and come back to what needs review.",
+        "eyebrow": "JLPT vocabulary app for iPhone",
+        "h1": "JLPT Pocket Word: Japanese vocabulary from N5 to N1",
+        "lead": "Study Japanese words by JLPT level with short quizzes, review of missed words, example sentences, and pronunciation. Pocket Word also offers HSK vocabulary practice for Chinese learners.",
         "chips": ["Japanese JLPT N5–N1", "Chinese HSK", "Made for everyday study"],
         "primary": "Explore JLPT Pocket Word", "nav_apps": "Apps", "nav_features": "How it works",
         "features_eyebrow": "JLPT Pocket Word", "features_title": "A clearer path through JLPT vocabulary",
@@ -46,8 +46,8 @@ LOCALES = {
         "path": "/ko/", "lang": "ko", "label": "한국어",
         "title": "JLPT 포켓 단어: 내 손안의 일본어 단어장 | Pocket Word",
         "description": "JLPT 포켓 단어: 내 손안의 일본어 단어장과 HSK 포켓 단어를 소개합니다. 레벨별 학습, 짧은 퀴즈, 오답 복습, 발음 듣기를 살펴보세요.",
-        "eyebrow": "매일 조금씩 쌓이는 언어 공부", "h1": "한 단어씩, 오래 기억하는 공부.",
-        "lead": "Pocket Word는 일본어와 중국어 단어를 짧고 집중해서 공부할 수 있도록 만든 앱입니다. 레벨을 고르고, 퀴즈를 풀고, 다시 봐야 할 단어를 복습하세요.",
+        "eyebrow": "iPhone용 JLPT 일본어 단어 앱", "h1": "JLPT 포켓 단어: 내 손안의 일본어 단어장",
+        "lead": "JLPT N5부터 N1까지 일본어 단어를 레벨별로 공부하세요. 짧은 퀴즈, 오답 복습, 예문, 발음 듣기를 지원합니다. 중국어 학습자를 위한 HSK 포켓 단어도 함께 소개합니다.",
         "chips": ["일본어 JLPT N5–N1", "중국어 HSK", "부담 없는 매일 학습"],
         "primary": "JLPT 앱 살펴보기", "nav_apps": "앱", "nav_features": "학습 방법",
         "features_eyebrow": "JLPT 포켓 단어: 내 손안의 일본어 단어장", "features_title": "JLPT 단어, 단계별로 꾸준히",
@@ -79,8 +79,8 @@ LOCALES = {
         "path": "/zh-cn/", "lang": "zh-CN", "label": "简体中文",
         "title": "JLPT口袋单词：掌上日语单词本 | Pocket Word",
         "description": "了解 JLPT口袋单词：掌上日语单词本和 HSK Pocket Word。按级别学习日语与汉语词汇，练习测验、错题复习和发音。",
-        "eyebrow": "每天学一点，记住更多词", "h1": "从一个单词开始，养成学习习惯。",
-        "lead": "Pocket Word 帮你利用短时间专注学习日语和汉语词汇。选择级别、完成测验，并复习还不熟悉的单词。",
+        "eyebrow": "iPhone 日语 JLPT 词汇应用", "h1": "JLPT口袋单词：掌上日语单词本",
+        "lead": "按 JLPT N5 至 N1 级别学习日语词汇，完成简短测验、复习错题、查看例句并听发音。页面也介绍面向汉语学习者的 HSK Pocket Word。",
         "chips": ["日语 JLPT N5–N1", "汉语 HSK", "适合日常练习"],
         "primary": "了解 JLPT 应用", "nav_apps": "应用", "nav_features": "学习方式",
         "features_eyebrow": "JLPT口袋单词：掌上日语单词本", "features_title": "按级别学习 JLPT 词汇",
@@ -112,8 +112,8 @@ LOCALES = {
         "path": "/zh-tw/", "lang": "zh-TW", "label": "繁體中文",
         "title": "JLPT 口袋單字：日文學習與日檢 | Pocket Word",
         "description": "認識 JLPT 口袋單字：日文學習與日檢，以及 HSK Pocket Word。按級別學習日文與中文單字，使用測驗、錯題複習和發音功能。",
-        "eyebrow": "每天學一點，記得更久", "h1": "從一個單字開始，養成學習習慣。",
-        "lead": "Pocket Word 讓你利用零碎時間專心學習日文與中文單字。選擇級別、完成測驗，再複習還不熟悉的單字。",
+        "eyebrow": "iPhone 日文 JLPT 單字應用程式", "h1": "JLPT 口袋單字：日文學習與日檢",
+        "lead": "按 JLPT N5 至 N1 級別學習日文單字，完成簡短測驗、複習錯題、查看例句並聆聽發音。頁面也介紹供中文學習者使用的 HSK Pocket Word。",
         "chips": ["日文 JLPT N5–N1", "中文 HSK", "適合日常練習"],
         "primary": "了解 JLPT 應用程式", "nav_apps": "應用程式", "nav_features": "學習方式",
         "features_eyebrow": "JLPT 口袋單字：日文學習與日檢", "features_title": "按級別學習 JLPT 單字",
@@ -145,8 +145,8 @@ LOCALES = {
         "path": "/vi/", "lang": "vi", "label": "Tiếng Việt",
         "title": "JLPT Pocket Word: Tiếng Nhật | Pocket Word",
         "description": "Khám phá JLPT Pocket Word: Tiếng Nhật và HSK Pocket Word. Học từ vựng tiếng Nhật, tiếng Trung theo cấp độ với bài kiểm tra ngắn, ôn tập và phát âm.",
-        "eyebrow": "Mỗi ngày một ít, nhớ lâu hơn", "h1": "Bắt đầu từ một từ, tạo thói quen học bền vững.",
-        "lead": "Pocket Word giúp bạn học từ vựng tiếng Nhật và tiếng Trung qua những buổi luyện tập ngắn, tập trung. Chọn cấp độ, làm bài và ôn lại những từ chưa nhớ.",
+        "eyebrow": "Ứng dụng từ vựng JLPT cho iPhone", "h1": "JLPT Pocket Word: Tiếng Nhật từ N5 đến N1",
+        "lead": "Học từ vựng tiếng Nhật theo cấp độ JLPT với bài kiểm tra ngắn, ôn từ trả lời sai, câu ví dụ và phát âm. Trang này cũng giới thiệu HSK Pocket Word dành cho người học tiếng Trung.",
         "chips": ["Tiếng Nhật JLPT N5–N1", "Tiếng Trung HSK", "Luyện tập mỗi ngày"],
         "primary": "Khám phá ứng dụng JLPT", "nav_apps": "Ứng dụng", "nav_features": "Cách học",
         "features_eyebrow": "JLPT Pocket Word: Tiếng Nhật", "features_title": "Học từ vựng JLPT theo từng cấp độ",
@@ -267,7 +267,7 @@ def page(locale, d):
   <main>
     <div class="hero"><div class="wrap hero-grid">
       <div><div class="eyebrow">{e(d['eyebrow'])}</div><h1>{e(d['h1'])}</h1><p class="lead">{e(d['lead'])}</p>
-        <div class="hero-points">{chips}</div><a class="button" href="#features">{e(d['primary'])} <span aria-hidden="true">→</span></a>
+        <div class="hero-points">{chips}</div><div class="hero-actions"><a class="button" href="#features">{e(d['primary'])} <span aria-hidden="true">→</span></a><a class="button secondary" href="{JLPT}" target="_blank" rel="noopener noreferrer">{e(d['app_cta'])} <span aria-hidden="true">↗</span></a></div>
       </div>
       <div class="hero-art" aria-hidden="true"><img src="/images/{image_locale}/1.webp" width="1183" height="2441" alt="" fetchpriority="high"><img src="/images/{image_locale}/2.webp" width="1183" height="2441" alt=""></div>
     </div></div>
