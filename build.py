@@ -191,6 +191,9 @@ def url(locale):
 def page(locale, d):
     image_locale = IMAGE_LOCALES[locale]
     hsk_image_locale = HSK_IMAGE_LOCALES[locale]
+    jlpt_policy_anchor = {"en": "en", "ko": "ko", "zh-CN": "zh-cn", "zh-TW": "zh-tw", "vi": "vi"}[locale]
+    hsk_policy_anchor = {"en": "en", "ko": "ko", "zh-CN": "en", "zh-TW": "en", "vi": "en"}[locale]
+    hsk_policy_label = d["privacy_hsk"] + (" (English)" if locale in ("zh-CN", "zh-TW", "vi") else "")
     canonical = url(locale)
     image = f"{BASE}/images/{image_locale}/1.webp"
     alternates = "\n".join(
@@ -292,7 +295,7 @@ def page(locale, d):
       <div class="faq-list">{faq}</div>
     </div></section>
   </main>
-  <footer class="site-footer"><div class="wrap footer-inner"><div><p><strong>Pocket Word</strong> · Jaelyung Kim</p><p class="small">© 2026 Jaelyung Kim</p></div><div class="footer-links"><a href="mailto:jaekim7724@gmail.com">{e(d['contact'])}</a><a href="/jlpt/privacy/">{e(d['privacy_jlpt'])}</a><a href="/hsk/privacy/">{e(d['privacy_hsk'])}</a></div></div></footer>
+  <footer class="site-footer"><div class="wrap footer-inner"><div><p><strong>Pocket Word</strong> · Jaelyung Kim</p><p class="small">© 2026 Jaelyung Kim</p></div><div class="footer-links"><a href="mailto:jaekim7724@gmail.com">{e(d['contact'])}</a><a href="/jlpt/privacy/#{jlpt_policy_anchor}">{e(d['privacy_jlpt'])}</a><a href="/hsk/privacy/#{hsk_policy_anchor}">{e(hsk_policy_label)}</a></div></div></footer>
 </body>
 </html>
 """
