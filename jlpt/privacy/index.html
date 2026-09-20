@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>JLPT 포켓 단어 개인정보 처리방침</title>
-  <meta name="description" content="JLPT 포켓 단어 개인정보 처리방침" />
+  <title>JLPT 포켓 단어: 내 손안의 일본어 단어장 개인정보 처리방침</title>
+  <meta name="description" content="JLPT 포켓 단어: 내 손안의 일본어 단어장 개인정보 처리방침" />
 
   <style>
     :root {
@@ -23,7 +23,7 @@
     }
 
     html {
-      scroll-behavior: smooth;
+      scroll-behavior: auto;
     }
 
     body {
@@ -53,10 +53,20 @@
       padding: 56px 0 64px;
     }
 
+    .policy-header {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      padding: 12px 0 8px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
     .topbar {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 20px;
       margin-bottom: 48px;
     }
 
@@ -66,6 +76,11 @@
       gap: 12px;
       font-weight: 750;
       letter-spacing: -0.02em;
+      min-width: 0;
+    }
+
+    .brand span {
+      overflow-wrap: anywhere;
     }
 
     .brand img {
@@ -104,9 +119,6 @@
     }
 
     .language-nav {
-      position: sticky;
-      top: 0;
-      z-index: 2;
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
@@ -145,7 +157,7 @@
 
     .policy-section {
       margin-top: 40px;
-      scroll-margin-top: 84px;
+      scroll-margin-top: var(--policy-header-height, 300px);
     }
 
     .policy-section h2 {
@@ -210,10 +222,11 @@
 
 <body>
   <main class="page">
+    <div class="policy-header">
     <div class="topbar">
       <a class="brand" href="/">
-        <img src="../../jlpt-pocket-word.png" alt="JLPT 포켓 단어" />
-        <span>JLPT 포켓 단어</span>
+        <img src="../../jlpt-pocket-word.png" alt="JLPT 앱 아이콘" />
+        <span>JLPT 포켓 단어: 내 손안의 일본어 단어장</span>
       </a>
 
       <a class="back" href="/">Pocket Word</a>
@@ -232,12 +245,13 @@
       <a href="#zh-tw" lang="zh-TW">繁體中文</a>
       <a href="#vi" lang="vi">Tiếng Việt</a>
     </nav>
+    </div>
 
     <section class="policy-section" id="ko" lang="ko">
       <h2>한국어</h2>
 
       <p>
-        개인 개발자 Jaelyung Kim(이하 "개발자")은 JLPT 포켓 단어(이하 "앱")
+        개인 개발자 Jaelyung Kim(이하 "개발자")은 JLPT 포켓 단어: 내 손안의 일본어 단어장(이하 "앱")
         이용자의 개인정보를 중요하게 생각합니다. 본 개인정보 처리방침은 앱 이용
         과정에서 처리될 수 있는 정보와 그 이용 목적을 안내합니다.
       </p>
@@ -536,7 +550,7 @@
       <p class="updated">最后更新：2026年8月17日</p>
 
       <p>
-        个人开发者 Jaelyung Kim（以下简称“开发者”）重视 JLPT Pocket Word
+        个人开发者 Jaelyung Kim（以下简称“开发者”）重视 JLPT口袋单词：掌上日语单词本
         （以下简称“本应用”）用户的隐私。本隐私政策说明您在使用本应用时可能被处理的
         信息以及这些信息的使用方式。
       </p>
@@ -673,7 +687,7 @@
       <p class="updated">最後更新：2026年8月17日</p>
 
       <p>
-        個人開發者 Jaelyung Kim（以下簡稱「開發者」）重視 JLPT Pocket Word
+        個人開發者 Jaelyung Kim（以下簡稱「開發者」）重視 JLPT 口袋單字：日文學習與日檢
         （以下簡稱「本應用程式」）使用者的隱私。本隱私權政策說明您使用本應用程式時
         可能受到處理的資訊，以及這些資訊的使用方式。
       </p>
@@ -811,7 +825,7 @@
 
       <p>
         Nhà phát triển cá nhân Jaelyung Kim (sau đây gọi là “Nhà phát triển”) coi trọng
-        quyền riêng tư của người dùng JLPT Pocket Word (sau đây gọi là “Ứng dụng”).
+        quyền riêng tư của người dùng JLPT Pocket Word: Tiếng Nhật (sau đây gọi là “Ứng dụng”).
         Chính sách quyền riêng tư này giải thích những thông tin có thể được xử lý khi
         bạn sử dụng Ứng dụng và cách các thông tin đó có thể được sử dụng.
       </p>
@@ -954,18 +968,22 @@
     </section>
 
     <footer>
-      © 2026 Jaelyung Kim · JLPT 포켓 단어
+      © 2026 Jaelyung Kim · <span id="footer-app-name">JLPT 포켓 단어: 내 손안의 일본어 단어장</span>
     </footer>
   </main>
   <script>
     const languageLinks = document.querySelectorAll(".language-nav a");
     const titles = {
-      ko: ["개인정보 처리방침", "JLPT 포켓 단어 개인정보 처리방침", "최종 업데이트: 2026년 8월 17일", "ko"],
-      en: ["Privacy Policy", "JLPT Pocket Word Privacy Policy", "Last updated: August 17, 2026", "en"],
-      "zh-cn": ["隐私政策", "JLPT Pocket Word 隐私政策", "最后更新：2026年8月17日", "zh-CN"],
-      "zh-tw": ["隱私權政策", "JLPT Pocket Word 隱私權政策", "最後更新：2026年8月17日", "zh-TW"],
-      vi: ["Chính sách quyền riêng tư", "Chính sách quyền riêng tư của JLPT Pocket Word", "Cập nhật lần cuối: ngày 17 tháng 8 năm 2026", "vi"]
+      ko: ["개인정보 처리방침", "JLPT 포켓 단어: 내 손안의 일본어 단어장 개인정보 처리방침", "최종 업데이트: 2026년 8월 17일", "ko", "JLPT 포켓 단어: 내 손안의 일본어 단어장"],
+      en: ["Privacy Policy", "JLPT Pocket Word Privacy Policy", "Last updated: August 17, 2026", "en", "JLPT Pocket Word"],
+      "zh-cn": ["隐私政策", "JLPT口袋单词：掌上日语单词本 隐私政策", "最后更新：2026年8月17日", "zh-CN", "JLPT口袋单词：掌上日语单词本"],
+      "zh-tw": ["隱私權政策", "JLPT 口袋單字：日文學習與日檢 隱私權政策", "最後更新：2026年8月17日", "zh-TW", "JLPT 口袋單字：日文學習與日檢"],
+      vi: ["Chính sách quyền riêng tư", "Chính sách quyền riêng tư của JLPT Pocket Word: Tiếng Nhật", "Cập nhật lần cuối: ngày 17 tháng 8 năm 2026", "vi", "JLPT Pocket Word: Tiếng Nhật"]
     };
+    const policyHeader = document.querySelector(".policy-header");
+    function syncHeaderHeight() {
+      document.documentElement.style.setProperty("--policy-header-height", Math.ceil(policyHeader.getBoundingClientRect().height + 12) + "px");
+    }
     function updateLanguageNav() {
       const key = titles[location.hash.slice(1)] ? location.hash.slice(1) : "ko";
       const selected = "#" + key;
@@ -977,7 +995,12 @@
       document.title = titles[key][1];
       document.querySelector("header .updated").textContent = titles[key][2];
       document.documentElement.lang = titles[key][3];
+      document.querySelector(".brand span").textContent = titles[key][4];
+      document.getElementById("footer-app-name").textContent = titles[key][4];
+      syncHeaderHeight();
+      if (location.hash) requestAnimationFrame(() => document.getElementById(key).scrollIntoView());
     }
+    new ResizeObserver(syncHeaderHeight).observe(policyHeader);
     addEventListener("hashchange", updateLanguageNav);
     updateLanguageNav();
   </script>

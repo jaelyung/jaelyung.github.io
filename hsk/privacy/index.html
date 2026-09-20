@@ -28,7 +28,7 @@
     }
 
     html {
-      scroll-behavior: smooth;
+      scroll-behavior: auto;
     }
 
     body {
@@ -59,6 +59,15 @@
       padding: 56px 0 64px;
     }
 
+    .policy-header {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      padding: 12px 0 8px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
     .topbar {
       display: flex;
       align-items: center;
@@ -84,9 +93,6 @@
     }
 
     .language-nav {
-      position: sticky;
-      top: 0;
-      z-index: 2;
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
@@ -146,7 +152,7 @@
 
     .policy-section {
       margin-top: 40px;
-      scroll-margin-top: 84px;
+      scroll-margin-top: var(--policy-header-height, 300px);
     }
 
     .policy-section h2 {
@@ -213,6 +219,7 @@
 
 <body>
   <main class="page">
+    <div class="policy-header">
     <div class="topbar">
       <div class="brand">
         <img src="../../hsk-pocket-word.png" alt="HSK 포켓 단어" />
@@ -232,6 +239,7 @@
       <a href="#en" lang="en">English</a>
       <a href="#ja" lang="ja">日本語</a>
     </nav>
+    </div>
 
     <section class="policy-section" id="ko" lang="ko">
       <h2>한국어</h2>
@@ -625,16 +633,20 @@
     </section>
 
     <footer>
-      © 2026 Jaelyung Kim · HSK 포켓 단어
+      © 2026 Jaelyung Kim · <span id="footer-app-name">HSK 포켓 단어</span>
     </footer>
   </main>
   <script>
     const languageLinks = document.querySelectorAll(".language-nav a");
     const titles = {
-      ko: ["개인정보 처리방침", "HSK 포켓 단어 개인정보 처리방침", "최종 업데이트: 2026년 9월 15일", "ko"],
-      en: ["Privacy Policy", "HSK Pocket Word Privacy Policy", "Last updated: September 15, 2026", "en"],
-      ja: ["プライバシーポリシー", "HSK ポケット単語 プライバシーポリシー", "最終更新日：2026年9月15日", "ja"]
+      ko: ["개인정보 처리방침", "HSK 포켓 단어 개인정보 처리방침", "최종 업데이트: 2026년 9월 15일", "ko", "HSK 포켓 단어"],
+      en: ["Privacy Policy", "HSK Pocket Word Privacy Policy", "Last updated: September 15, 2026", "en", "HSK Pocket Word"],
+      ja: ["プライバシーポリシー", "HSK ポケット単語 プライバシーポリシー", "最終更新日：2026年9月15日", "ja", "HSK ポケット単語"]
     };
+    const policyHeader = document.querySelector(".policy-header");
+    function syncHeaderHeight() {
+      document.documentElement.style.setProperty("--policy-header-height", Math.ceil(policyHeader.getBoundingClientRect().height + 12) + "px");
+    }
     function updateLanguageNav() {
       const key = titles[location.hash.slice(1)] ? location.hash.slice(1) : "ko";
       const selected = "#" + key;
@@ -646,7 +658,12 @@
       document.title = titles[key][1];
       document.querySelector("header .updated").textContent = titles[key][2];
       document.documentElement.lang = titles[key][3];
+      document.querySelector(".brand span").textContent = titles[key][4];
+      document.getElementById("footer-app-name").textContent = titles[key][4];
+      syncHeaderHeight();
+      if (location.hash) requestAnimationFrame(() => document.getElementById(key).scrollIntoView());
     }
+    new ResizeObserver(syncHeaderHeight).observe(policyHeader);
     addEventListener("hashchange", updateLanguageNav);
     updateLanguageNav();
   </script>
