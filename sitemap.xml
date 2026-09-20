@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://jaelyung.github.io/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jaelyung.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://jaelyung.github.io/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://jaelyung.github.io/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://jaelyung.github.io/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://jaelyung.github.io/vi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaelyung.github.io/"/>
+  </url>
+  <url><loc>https://jaelyung.github.io/ko/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jaelyung.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://jaelyung.github.io/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://jaelyung.github.io/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://jaelyung.github.io/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://jaelyung.github.io/vi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaelyung.github.io/"/>
+  </url>
+  <url><loc>https://jaelyung.github.io/zh-cn/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jaelyung.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://jaelyung.github.io/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://jaelyung.github.io/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://jaelyung.github.io/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://jaelyung.github.io/vi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaelyung.github.io/"/>
+  </url>
+  <url><loc>https://jaelyung.github.io/zh-tw/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jaelyung.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://jaelyung.github.io/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://jaelyung.github.io/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://jaelyung.github.io/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://jaelyung.github.io/vi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaelyung.github.io/"/>
+  </url>
+  <url><loc>https://jaelyung.github.io/vi/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jaelyung.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://jaelyung.github.io/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://jaelyung.github.io/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://jaelyung.github.io/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://jaelyung.github.io/vi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaelyung.github.io/"/>
+  </url>
+  <url><loc>https://jaelyung.github.io/jlpt/privacy/</loc></url>
+  <url><loc>https://jaelyung.github.io/hsk/privacy/</loc></url>
+</urlset>

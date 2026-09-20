@@ -1,366 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Pocket Word</title>
-  <meta
-    name="description"
-    content="Pocket-sized vocabulary apps for JLPT and HSK learners."
-  />
-  <meta name="google-site-verification" content="16IrVjWZvAI2gsgWfEkJJM5fsrkRQNJg6jO9v7mw_cU" />
-
-  <style>
-    :root {
-      --bg: #f7f7f5;
-      --text: #171717;
-      --muted: #777777;
-      --card: #ffffff;
-      --border: #e8e8e5;
-      --shadow: 0 4px 18px rgba(0, 0, 0, 0.045);
-      --accent: #111111;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      min-height: 100vh;
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "SF Pro Text",
-        "Helvetica Neue",
-        Arial,
-        sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .page {
-      width: min(100% - 32px, 430px);
-      margin: 0 auto;
-      padding: 64px 0 36px;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 8px 8px 12px;
-    }
-
-    .brand-mark {
-      width: 74px;
-      height: 74px;
-      margin: 0 auto 20px;
-      border-radius: 22px;
-      background: #171717;
-      color: #ffffff;
-      display: grid;
-      place-items: center;
-      font-size: 28px;
-      font-weight: 750;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
-    }
-
-    .brand-name {
-      font-size: 15px;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    h1 {
-      font-size: 32px;
-      line-height: 1.08;
-      letter-spacing: -0.045em;
-      font-weight: 800;
-      max-width: 360px;
-      margin: 0 auto;
-    }
-
-    .hero-copy {
-      margin: 14px auto 0;
-      max-width: 345px;
-      color: var(--muted);
-      font-size: 14.5px;
-      line-height: 1.55;
-    }
-
-    .section-label {
-      margin-top: 34px;
-      margin-bottom: 10px;
-      padding-left: 4px;
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.10em;
-    }
-
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .app-card {
-      min-height: 132px;
-      padding: 18px;
-      border-radius: 20px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      color: var(--text);
-      text-decoration: none;
-      display: grid;
-      grid-template-columns: 64px 1fr;
-      gap: 15px;
-      align-items: start;
-      transition: transform 0.16s ease, box-shadow 0.16s ease;
-    }
-
-    .app-icon {
-      width: 64px;
-      height: 64px;
-      border-radius: 16px;
-      overflow: hidden;
-      background: #fff;
-      box-shadow: 0 4px 14px rgba(0,0,0,.06);
-      flex-shrink: 0;
-    }
-
-    .app-icon img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .app-content {
-      min-width: 0;
-      padding-top: 2px;
-    }
-
-    .app-name {
-      font-size: 16px;
-      font-weight: 750;
-      letter-spacing: -0.02em;
-      line-height: 1.25;
-    }
-
-    .app-copy {
-      margin-top: 5px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.45;
-    }
-
-    .cta {
-      margin-top: 11px;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 12.5px;
-      font-weight: 700;
-      color: var(--accent);
-    }
-
-    .arrow {
-      transition: transform 0.16s ease;
-    }
-
-    .app-card:hover .arrow {
-      transform: translateX(3px);
-    }
-
-    .contact-card {
-      min-height: 62px;
-      padding: 0 17px;
-      border-radius: 18px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      color: var(--text);
-      text-decoration: none;
-      display: grid;
-      grid-template-columns: 42px 1fr 22px;
-      gap: 12px;
-      align-items: center;
-      transition: transform 0.16s ease, box-shadow 0.16s ease;
-    }
-
-    .contact-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: #ececf0;
-      display: grid;
-      place-items: center;
-      font-size: 16px;
-    }
-
-    .contact-label {
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .contact-email {
-      display: block;
-      margin-top: 2px;
-      color: var(--muted);
-      font-size: 11.5px;
-      font-weight: 400;
-    }
-
-    .chevron {
-      color: #aaaaaa;
-      font-size: 19px;
-    }
-
-    .tagline {
-      margin: 34px auto 0;
-      max-width: 330px;
-      color: #929292;
-      text-align: center;
-      font-size: 12.5px;
-      line-height: 1.55;
-    }
-
-    footer {
-      margin-top: 26px;
-      text-align: center;
-      color: #b0b0b0;
-      font-size: 10.5px;
-    }
-
-    @media (hover: hover) {
-      .app-card:hover,
-      .contact-card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 9px 26px rgba(0, 0, 0, 0.07);
-      }
-    }
-
-    @media (max-width: 380px) {
-      .page {
-        width: min(100% - 24px, 430px);
-        padding-top: 48px;
-      }
-
-      h1 {
-        font-size: 29px;
-      }
-
-      .app-card {
-        grid-template-columns: 58px 1fr;
-        padding: 16px;
-      }
-
-      .app-icon {
-        width: 58px;
-        height: 58px;
-        border-radius: 15px;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pocket Word | JLPT &amp; HSK vocabulary apps</title>
+  <meta name="description" content="Learn Japanese JLPT and Chinese HSK vocabulary with Pocket Word. Explore level-based study, quick quizzes, review, pronunciation, and daily practice.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="google-site-verification" content="16IrVjWZvAI2gsgWfEkJJM5fsrkRQNJg6jO9v7mw_cU">
+  <link rel="canonical" href="https://jaelyung.github.io/">
+  <link rel="alternate" hreflang="en" href="https://jaelyung.github.io/">
+<link rel="alternate" hreflang="ko" href="https://jaelyung.github.io/ko/">
+<link rel="alternate" hreflang="zh-CN" href="https://jaelyung.github.io/zh-cn/">
+<link rel="alternate" hreflang="zh-TW" href="https://jaelyung.github.io/zh-tw/">
+<link rel="alternate" hreflang="vi" href="https://jaelyung.github.io/vi/">
+<link rel="alternate" hreflang="x-default" href="https://jaelyung.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pocket Word">
+  <meta property="og:locale" content="en">
+  <meta property="og:title" content="Pocket Word | JLPT &amp; HSK vocabulary apps">
+  <meta property="og:description" content="Learn Japanese JLPT and Chinese HSK vocabulary with Pocket Word. Explore level-based study, quick quizzes, review, pronunciation, and daily practice.">
+  <meta property="og:url" content="https://jaelyung.github.io/">
+  <meta property="og:image" content="https://jaelyung.github.io/images/en/1.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/jlpt-pocket-word.png">
+  <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://jaelyung.github.io/#organization", "name": "Pocket Word", "url": "https://jaelyung.github.io/", "email": "jaekim7724@gmail.com", "founder": {"@type": "Person", "name": "Jaelyung Kim"}}, {"@type": "WebPage", "@id": "https://jaelyung.github.io/#webpage", "url": "https://jaelyung.github.io/", "name": "Pocket Word | JLPT & HSK vocabulary apps", "description": "Learn Japanese JLPT and Chinese HSK vocabulary with Pocket Word. Explore level-based study, quick quizzes, review, pronunciation, and daily practice.", "inLanguage": "en", "isPartOf": {"@id": "https://jaelyung.github.io/#website"}, "about": [{"@id": "https://jaelyung.github.io/#jlpt"}, {"@id": "https://jaelyung.github.io/#hsk"}]}, {"@type": "WebSite", "@id": "https://jaelyung.github.io/#website", "name": "Pocket Word", "url": "https://jaelyung.github.io/", "publisher": {"@id": "https://jaelyung.github.io/#organization"}, "inLanguage": ["en", "ko", "zh-CN", "zh-TW", "vi"]}, {"@type": "SoftwareApplication", "@id": "https://jaelyung.github.io/#jlpt", "name": "JLPT Pocket Word", "applicationCategory": "EducationalApplication", "operatingSystem": "iOS", "url": "https://apps.apple.com/app/id6768330065", "downloadUrl": "https://apps.apple.com/app/id6768330065", "image": "https://jaelyung.github.io/jlpt-pocket-word.png", "screenshot": ["https://jaelyung.github.io/images/en/1.webp", "https://jaelyung.github.io/images/en/2.webp", "https://jaelyung.github.io/images/en/3.webp", "https://jaelyung.github.io/images/en/4.webp", "https://jaelyung.github.io/images/en/5.webp", "https://jaelyung.github.io/images/en/6.webp"], "description": "Study Japanese words by JLPT level with quizzes, furigana, example sentences, favorites, and review.", "publisher": {"@id": "https://jaelyung.github.io/#organization"}}, {"@type": "SoftwareApplication", "@id": "https://jaelyung.github.io/#hsk", "name": "HSK Pocket Word", "applicationCategory": "EducationalApplication", "operatingSystem": "iOS", "url": "https://apps.apple.com/app/id6761183360", "downloadUrl": "https://apps.apple.com/app/id6761183360", "image": "https://jaelyung.github.io/hsk-pocket-word.png", "screenshot": ["https://jaelyung.github.io/images/hsk/en/1.webp", "https://jaelyung.github.io/images/hsk/en/2.webp", "https://jaelyung.github.io/images/hsk/en/3.webp", "https://jaelyung.github.io/images/hsk/en/4.webp", "https://jaelyung.github.io/images/hsk/en/5.webp"], "description": "Practice Chinese vocabulary for the HSK with short quizzes and repeated review.", "publisher": {"@id": "https://jaelyung.github.io/#organization"}}]}</script>
 </head>
-
 <body>
-  <main class="page">
-
-    <header class="hero">
-      <div class="brand-mark">P</div>
-      <div class="brand-name">Pocket Word</div>
-
-      <h1>Learn smarter,<br />one word at a time.</h1>
-
-      <p class="hero-copy">
-        Simple vocabulary apps designed to help you
-        study a little every day — and actually remember it.
-      </p>
-    </header>
-
-    <div class="section-label">Apps</div>
-
-    <div class="links">
-
-      <a
-        class="app-card"
-        href="https://apps.apple.com/kr/app/jlpt-%ED%8F%AC%EC%BC%93-%EB%8B%A8%EC%96%B4/id6768330065"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div class="app-icon">
-          <img src="jlpt-pocket-word.png" alt="JLPT 포켓 단어 앱 아이콘" />
-        </div>
-
-        <div class="app-content">
-          <div class="app-name">JLPT 포켓 단어</div>
-          <p class="app-copy">
-            Build your Japanese vocabulary with quick quizzes,
-            furigana, and focused review.
-          </p>
-          <div class="cta">
-            View on the App Store <span class="arrow">→</span>
-          </div>
-        </div>
-      </a>
-
-      <a
-        class="app-card"
-        href="https://apps.apple.com/kr/app/hsk-%ED%8F%AC%EC%BC%93-%EB%8B%A8%EC%96%B4/id6761183360"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div class="app-icon">
-          <img src="hsk-pocket-word.png" alt="HSK 포켓 단어 앱 아이콘" />
-        </div>
-
-        <div class="app-content">
-          <div class="app-name">HSK 포켓 단어</div>
-          <p class="app-copy">
-            Practice essential Chinese vocabulary through
-            simple quizzes and repeated review.
-          </p>
-          <div class="cta">
-            View on the App Store <span class="arrow">→</span>
-          </div>
-        </div>
-      </a>
-
+  <header class="site-header"><div class="wrap header-inner">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">P</span>Pocket Word</a>
+    <div class="header-actions"><a href="#features">How it works</a><a href="#apps">Apps</a>
+      <nav class="language-nav" aria-label="Language"><a href="/" hreflang="en" lang="en" aria-current="page">English</a><a href="/ko/" hreflang="ko" lang="ko">한국어</a><a href="/zh-cn/" hreflang="zh-CN" lang="zh-CN">简体中文</a><a href="/zh-tw/" hreflang="zh-TW" lang="zh-TW">繁體中文</a><a href="/vi/" hreflang="vi" lang="vi">Tiếng Việt</a></nav>
     </div>
-
-    <div class="section-label">Contact</div>
-
-    <div class="links">
-      <a class="contact-card" href="mailto:jaekim7724@gmail.com">
-        <div class="contact-icon">✉</div>
-
-        <div class="contact-label">
-          Contact
-          <span class="contact-email">jaekim7724@gmail.com</span>
-        </div>
-
-        <div class="chevron">›</div>
-      </a>
-    </div>
-
-    <p class="tagline">
-      Pocket-sized language learning for everyday progress.
-    </p>
-
-    <footer>
-      © <span id="year"></span> Jaelyung Kim
-    </footer>
-
+  </div></header>
+  <main>
+    <div class="hero"><div class="wrap hero-grid">
+      <div><div class="eyebrow">Language learning, one word at a time</div><h1>Build a language habit that sticks.</h1><p class="lead">Pocket Word makes Japanese and Chinese vocabulary easier to practice in short, focused sessions. Choose a level, learn words, and come back to what needs review.</p>
+        <div class="hero-points"><span>Japanese JLPT N5–N1</span><span>Chinese HSK</span><span>Made for everyday study</span></div><a class="button" href="#features">Explore JLPT Pocket Word <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true"><img src="/images/en/1.webp" width="1183" height="2441" alt="" fetchpriority="high"><img src="/images/en/2.webp" width="1183" height="2441" alt=""></div>
+    </div></div>
+    <section id="features"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">JLPT Pocket Word</div><h2>A clearer path through JLPT vocabulary</h2><p>Start with your JLPT level and use the app&#x27;s study tools to keep making progress.</p></div>
+      <div class="feature-grid"><article class="feature"><div class="number">01</div><h3>Study by level</h3><p>Practice Japanese vocabulary from JLPT N5 through N1 and see your progress for each level.</p></article><article class="feature"><div class="number">02</div><h3>Quiz and review</h3><p>Answer quick questions, then revisit words you missed at the end of a session.</p></article><article class="feature"><div class="number">03</div><h3>Find and hear words</h3><p>Search the vocabulary list, view readings and example sentences, save favorites, and play pronunciation.</p></article></div>
+    </div></section>
+    <section class="gallery-section" id="preview"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">Inside the app</div><h2>See the study flow</h2><p>Localized iPhone previews of JLPT Pocket Word, from your level dashboard to daily reminders.</p></div>
+      <div class="gallery"><figure class="shot"><img src="/images/en/1.webp" width="1183" height="2441" loading="lazy" decoding="async" alt="JLPT Pocket Word — Level dashboard"><figcaption>Level dashboard</figcaption></figure><figure class="shot"><img src="/images/en/2.webp" width="1183" height="2441" loading="lazy" decoding="async" alt="JLPT Pocket Word — Vocabulary quiz"><figcaption>Vocabulary quiz</figcaption></figure><figure class="shot"><img src="/images/en/3.webp" width="1183" height="2441" loading="lazy" decoding="async" alt="JLPT Pocket Word — Review missed words"><figcaption>Review missed words</figcaption></figure><figure class="shot"><img src="/images/en/4.webp" width="1183" height="2441" loading="lazy" decoding="async" alt="JLPT Pocket Word — Searchable vocabulary"><figcaption>Searchable vocabulary</figcaption></figure><figure class="shot"><img src="/images/en/5.webp" width="1183" height="2441" loading="lazy" decoding="async" alt="JLPT Pocket Word — Word details"><figcaption>Word details</figcaption></figure><figure class="shot"><img src="/images/en/6.webp" width="1183" height="2441" loading="lazy" decoding="async" alt="JLPT Pocket Word — Daily reminder"><figcaption>Daily reminder</figcaption></figure></div>
+    </div></section>
+    <section class="gallery-section" id="hsk-preview"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">HSK Pocket Word</div><h2>HSK Pocket Word in action</h2><p>Study Chinese vocabulary across HSK levels, search by Hanzi or pinyin, and revisit words with examples and audio.</p></div>
+      <div class="gallery gallery-five"><figure class="shot"><img src="/images/hsk/en/1.webp" width="1183" height="2441" loading="lazy" decoding="async" alt="HSK Pocket Word — Vocabulary quiz"><figcaption>Vocabulary quiz</figcaption></figure><figure class="shot"><img src="/images/hsk/en/2.webp" width="1183" height="2441" loading="lazy" decoding="async" alt="HSK Pocket Word — HSK level progress"><figcaption>HSK level progress</figcaption></figure><figure class="shot"><img src="/images/hsk/en/3.webp" width="1183" height="2441" loading="lazy" decoding="async" alt="HSK Pocket Word — Search by Hanzi or pinyin"><figcaption>Search by Hanzi or pinyin</figcaption></figure><figure class="shot"><img src="/images/hsk/en/4.webp" width="1183" height="2441" loading="lazy" decoding="async" alt="HSK Pocket Word — Word details"><figcaption>Word details</figcaption></figure><figure class="shot"><img src="/images/hsk/en/5.webp" width="1183" height="2441" loading="lazy" decoding="async" alt="HSK Pocket Word — Daily reminder"><figcaption>Daily reminder</figcaption></figure></div>
+    </div></section>
+    <section id="apps"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">Our apps</div><h2>Choose what you&#x27;re learning</h2><p>Two focused vocabulary apps for Japanese and Chinese learners.</p></div>
+      <div class="app-grid">
+        <article class="app-card"><div class="app-card-head"><img src="/jlpt-pocket-word.png" width="66" height="66" loading="lazy" alt=""><h3>JLPT Pocket Word</h3></div><p>Study Japanese words by JLPT level with quizzes, furigana, example sentences, favorites, and review.</p><a class="button secondary" href="https://apps.apple.com/app/id6768330065" target="_blank" rel="noopener noreferrer">View on the App Store <span aria-hidden="true">↗</span></a></article>
+        <article class="app-card"><div class="app-card-head"><img src="/hsk-pocket-word.png" width="66" height="66" loading="lazy" alt=""><h3>HSK Pocket Word</h3></div><p>Practice Chinese vocabulary for the HSK with short quizzes and repeated review.</p><a class="button secondary" href="https://apps.apple.com/app/id6761183360" target="_blank" rel="noopener noreferrer">View on the App Store <span aria-hidden="true">↗</span></a></article>
+      </div>
+    </div></section>
+    <section class="faq-section"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">Quick answers</div><h2>About Pocket Word</h2></div>
+      <div class="faq-list"><details><summary>What is JLPT Pocket Word?</summary><p>JLPT Pocket Word is an iPhone vocabulary app for Japanese learners. It organizes words by JLPT level from N5 to N1 and offers quizzes, review, pronunciation, and examples.</p></details><details><summary>How can I review words I missed?</summary><p>After a quiz, the results screen offers a way to review incorrect words. You can also save words as favorites and find them in the vocabulary list.</p></details><details><summary>Is there an app for Chinese vocabulary?</summary><p>Yes. HSK Pocket Word is the companion app for Chinese HSK vocabulary practice.</p></details></div>
+    </div></section>
   </main>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <footer class="site-footer"><div class="wrap footer-inner"><div><p><strong>Pocket Word</strong> · Jaelyung Kim</p><p class="small">© 2026 Jaelyung Kim</p></div><div class="footer-links"><a href="mailto:jaekim7724@gmail.com">Contact the developer</a><a href="/jlpt/privacy/">JLPT privacy policy</a><a href="/hsk/privacy/">HSK privacy policy</a></div></div></footer>
 </body>
 </html>
