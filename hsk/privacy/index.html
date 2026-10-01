@@ -267,38 +267,14 @@
       </p>
 
       <p>
-        단어별 학습 이력, 퀴즈 선택 내용, 응답 시간 및 단어 암기 상태 등 상세 학습
-        데이터는 사용자의 기기에 저장되며 개발자의 서버로 전송되지 않습니다.
+        학습 세션의 시작·종료 시각, 학습 모드와 급수, 출제·정답·오답 수,
+        단어별 정오답 여부와 응답 시간, 오늘 학습 단어 수, 연속 학습일,
+        총 학습 시간 및 단어 암기 상태 등의 학습 데이터는 학습 기능과 통계를
+        제공하기 위해 사용자의 기기에 저장됩니다. 이 정보는 개발자의 서버 또는
+        외부 분석 서비스로 전송되지 않습니다.
       </p>
 
-      <h3>2. 이용 분석 정보</h3>
-
-      <p>
-        앱은 기능 개선과 유료 학습 기능의 설계를 위해 Google Firebase Analytics를
-        사용합니다. 이 경우 학습 시작·완료·이탈 여부, 학습 모드와 급수,
-        출제·정답·오답 개수, 오답 복습 안내의 표시 및 버튼 선택, 오늘 학습 단어 수,
-        연속 학습일과 암기율 같은 집계형 이용 정보가 처리될 수 있습니다.
-      </p>
-
-      <p>
-        개발자는 분석 이벤트에 이름, 이메일, 전화번호, 단어 원문, 선택지 내용 또는
-        단어별 식별자를 포함하지 않습니다. 다만 Firebase SDK는 서비스 제공과 측정을
-        위해 앱 인스턴스 식별자, 기기·앱 정보, 대략적 위치 및 진단 정보를 Google의
-        정책에 따라 처리할 수 있습니다. 자세한 내용은
-        <a class="text-link" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase 개인정보 보호 및 보안 안내</a>와
-        <a class="text-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google 개인정보처리방침</a>에서 확인할 수 있습니다.
-      </p>
-
-      <p>
-        앱은 최초 진입 시 “학습 분석 데이터 공유”에 대한 동의 여부를 묻습니다. 동의하기
-        전에는 분석 정보를 수집하지 않으며, 동의하지 않아도 앱의 학습 기능을 이용할 수
-        있습니다. 사용자는 앱 설정에서 선택을 언제든 변경할 수 있습니다. 수집을 끄면 이후
-        분석 수집이 중단되고 기기의 Analytics 데이터와 앱 인스턴스 식별자가 재설정됩니다.
-        이전에 전송된 정보는 Google Analytics 속성의 보관 기간과 Google 정책에 따라
-        보관 또는 삭제됩니다.
-      </p>
-
-      <h3>3. 광고 서비스 및 제3자 서비스</h3>
+      <h3>2. 광고 서비스 및 제3자 서비스</h3>
 
       <p>
         앱은 광고 제공을 위해 Google AdMob 및 Google Mobile Ads SDK를 사용합니다.
@@ -331,7 +307,7 @@
         <a class="text-link" href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google 광고 관련 정책</a>에서 확인할 수 있습니다.
       </p>
 
-      <h3>4. 광고 개인화 및 사용자 선택</h3>
+      <h3>3. 광고 개인화 및 사용자 선택</h3>
 
       <p>
         관련 법령이나 플랫폼 정책에 따라 필요한 경우 앱은 광고 개인화 또는 데이터
@@ -344,7 +320,7 @@
         제한된 광고가 표시되거나 광고 제공이 제한될 수 있으며, 앱의 기본 학습 기능은
         계속 이용할 수 있습니다.
       </p>
-      <h3>5. 아동 개인정보 보호</h3>
+      <h3>4. 아동 개인정보 보호</h3>
 
       <p>
         앱은 만 14세 미만 아동을 주된 대상으로 설계되지 않았으며, 개발자는 아동의
@@ -352,7 +328,7 @@
         직접 수집된 사실을 알게 된 경우 합리적인 조치를 통해 해당 정보를 삭제합니다.
       </p>
 
-      <h3>6. 개인정보의 보관·삭제 및 국외 처리</h3>
+      <h3>5. 개인정보의 보관·삭제 및 국외 처리</h3>
 
       <p>
         앱의 학습 데이터는 사용자가 앱을 삭제할 때까지 기기에 보관되며, 앱을 삭제하면
@@ -361,10 +337,10 @@
       </p>
 
       <p>
-        Firebase Analytics와 Google Mobile Ads SDK가 처리하는 정보는 SDK가 작동하는
+        Google Mobile Ads SDK가 처리하는 정보는 SDK가 작동하는
         동안 네트워크를 통해 Google LLC 및 관련 서비스 제공자에게 자동으로 전송될 수 있으며, Google과
         관련 서비스 제공자가 처리 시설을 운영하는 국가에서 처리될 수 있습니다.
-        처리 목적과 항목은 본 방침 제2조 및 제3조에 기재된 내용과 같으며, 보관 기간과 삭제 절차는
+        처리 목적과 항목은 본 방침 제2조에 기재된 내용과 같으며, 보관 기간과 삭제 절차는
         Google의 정책 및 관련 법령에 따릅니다.
       </p>
 
@@ -374,7 +350,7 @@
         아래 이메일로 개발자에게 문의할 수 있습니다.
       </p>
 
-      <h3>7. 개인정보 처리방침의 변경</h3>
+      <h3>6. 개인정보 처리방침의 변경</h3>
 
       <p>
         앱의 기능, 사용 중인 제3자 서비스 또는 관련 법령이 변경되는 경우 본 개인정보
@@ -382,7 +358,7 @@
         날짜를 수정합니다.
       </p>
 
-      <h3>8. 문의</h3>
+      <h3>7. 문의</h3>
 
       <p>
         개인정보 처리방침 또는 앱의 개인정보 보호와 관련한 문의는 아래 연락처로
@@ -418,44 +394,15 @@
       </p>
 
       <p>
-        Detailed learning data, including per-word study history, answer choices,
-        response times, and word mastery status, is stored on your device and is
-        not transmitted to the Developer’s server.
+        Learning data—including study session start and end times, study mode and
+        HSK level, question, correct-answer, and wrong-answer counts, per-word answer
+        results and response times, words studied today, study streak, total study
+        time, and word mastery status—is stored on your device to provide learning
+        features and statistics. It is not transmitted to the Developer’s server or
+        any external analytics service.
       </p>
 
-      <h3>2. Usage Analytics</h3>
-
-      <p>
-        The App uses Google Firebase Analytics to improve features and design
-        paid learning features. Aggregated usage information may be processed,
-        including whether a study session starts, completes, or is exited; study
-        mode and HSK level; question, correct-answer, and wrong-answer counts;
-        wrong-answer review prompt impressions and button choices; words studied
-        today; study streak; and mastery percentage.
-      </p>
-
-      <p>
-        The Developer does not include names, email addresses, phone numbers, word
-        text, answer-choice content, or per-word identifiers in analytics events.
-        Firebase may process app instance identifiers, device and app information,
-        approximate location, and diagnostics under Google’s policies to provide
-        and measure the service. For details, see
-        <a class="text-link" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy and Security</a>
-        and
-        <a class="text-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google’s Privacy Policy</a>.
-      </p>
-
-      <p>
-        On first entry, the App asks whether the user agrees to “Share Learning
-        Analytics.” No analytics information is collected before consent, and users
-        can use the App’s learning features if they decline. Users can change their
-        choice at any time in the App’s settings. Turning collection off stops future
-        Analytics collection and resets Analytics data and the app instance identifier
-        stored on the device. Previously transmitted information is retained or deleted
-        according to the Google Analytics retention period and Google’s policies.
-      </p>
-
-      <h3>3. Advertising and Third-Party Services</h3>
+      <h3>2. Advertising and Third-Party Services</h3>
 
       <p>
         The App uses Google AdMob and the Google Mobile Ads SDK to display advertisements.
@@ -490,7 +437,7 @@
         <a class="text-link" href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google’s advertising policies</a>.
       </p>
 
-      <h3>4. Ad Personalization and User Choices</h3>
+      <h3>3. Ad Personalization and User Choices</h3>
 
       <p>
         Where required by applicable law or platform policies, the App requests
@@ -503,7 +450,7 @@
         provided, non-personalized or limited ads may be shown, or ad delivery may
         be restricted. The App’s core learning features will remain available.
       </p>
-      <h3>5. Children’s Privacy</h3>
+      <h3>4. Children’s Privacy</h3>
 
       <p>
         The App is not primarily directed to children under the age of 14, and the
@@ -512,7 +459,7 @@
         directly, reasonable steps will be taken to delete it.
       </p>
 
-      <h3>6. Data Retention, Deletion, and International Processing</h3>
+      <h3>5. Data Retention, Deletion, and International Processing</h3>
 
       <p>
         Learning data is retained on your device until you delete the App. Deleting
@@ -522,11 +469,11 @@
       </p>
 
       <p>
-        Information processed by Firebase Analytics and the Google Mobile Ads SDK may
+        Information processed by the Google Mobile Ads SDK may
         be transmitted automatically over a network to Google LLC and related service
         providers while the SDKs are operating. It may be processed in countries where
         Google and its service providers operate processing facilities. The purposes
-        and categories of data are described in Sections 2 and 3. Retention periods and
+        and categories of data are described in Section 2. Retention periods and
         deletion procedures are governed by Google’s policies and applicable law.
       </p>
 
@@ -536,7 +483,7 @@
         the email address below if you need assistance locating the relevant options.
       </p>
 
-      <h3>7. Changes to This Policy</h3>
+      <h3>6. Changes to This Policy</h3>
 
       <p>
         This Privacy Policy may be updated if the App’s features, third-party services,
@@ -544,7 +491,7 @@
         and the “Last updated” date will be revised.
       </p>
 
-      <h3>8. Contact</h3>
+      <h3>7. Contact</h3>
 
       <p>
         If you have any questions regarding this Privacy Policy or the App’s privacy
@@ -579,38 +526,13 @@
       </p>
 
       <p>
-        単語ごとの学習履歴、回答として選択した内容、回答時間、単語の習得状況などの
-        詳細な学習データは、お使いの端末内に保存され、開発者のサーバーには送信されません。
+        学習セッションの開始・終了時刻、学習モードと級、出題数・正解数・不正解数、
+        単語ごとの正誤と回答時間、今日学習した単語数、連続学習日数、総学習時間、
+        単語の習得状況などの学習データは、学習機能と統計を提供するために端末内へ
+        保存されます。これらの情報は、開発者のサーバーや外部の分析サービスには送信されません。
       </p>
 
-      <h3>2. 利用状況の分析情報</h3>
-
-      <p>
-        本アプリは、機能改善および有料学習機能の設計のために Google Firebase Analytics を
-        使用します。この場合、学習セッションの開始・完了・離脱、学習モードと
-        HSK レベル、出題数・正解数・不正解数、誤答復習画面の表示とボタン操作、当日の学習単語数、
-        連続学習日数、習得率などの集計された利用情報が処理される場合があります。
-      </p>
-
-      <p>
-        開発者は分析イベントに、氏名、メールアドレス、電話番号、単語本文、選択肢の内容、
-        または単語ごとの識別子を含めません。ただし Firebase SDK は、サービスの提供と測定のため、
-        Google のポリシーに基づきアプリインスタンス識別子、端末・アプリ情報、おおよその位置情報、
-        診断情報を処理する場合があります。詳しくは
-        <a class="text-link" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase のプライバシーとセキュリティ</a>および
-        <a class="text-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google プライバシーポリシー</a>をご確認ください。
-      </p>
-
-      <p>
-        本アプリは初回利用時に「学習分析データを共有」への同意を確認します。同意前に
-        分析情報を収集することはなく、同意しなくても学習機能を利用できます。ユーザーは
-        本アプリの設定でいつでも選択を変更できます。収集をオフにすると、以後の Analytics
-        による収集が停止し、端末の Analytics データとアプリインスタンス識別子がリセット
-        されます。送信済みの情報は、Google Analytics の保持期間および Google のポリシーに
-        従って保持または削除されます。
-      </p>
-
-      <h3>3. 広告サービスおよび第三者サービス</h3>
+      <h3>2. 広告サービスおよび第三者サービス</h3>
 
       <p>
         本アプリは、広告を表示するために Google AdMob および Google Mobile Ads SDK を使用します。
@@ -643,7 +565,7 @@
         <a class="text-link" href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google の広告に関するポリシー</a>をご確認ください。
       </p>
 
-      <h3>4. 広告のパーソナライズとユーザーの選択</h3>
+      <h3>3. 広告のパーソナライズとユーザーの選択</h3>
 
       <p>
         適用される法令またはプラットフォームのポリシーで必要とされる場合、本アプリは
@@ -656,7 +578,7 @@
         いない広告や制限付き広告が表示される、または広告配信が制限されることがありますが、
         本アプリの基本的な学習機能は引き続き利用できます。
       </p>
-      <h3>5. 子どものプライバシー</h3>
+      <h3>4. 子どものプライバシー</h3>
 
       <p>
         本アプリは14歳未満の子どもを主な対象として設計されておらず、開発者は子どもの
@@ -664,7 +586,7 @@
         認識した場合、合理的な措置を講じて削除します。
       </p>
 
-      <h3>6. 情報の保存・削除および国外での処理</h3>
+      <h3>5. 情報の保存・削除および国外での処理</h3>
 
       <p>
         学習データは、本アプリを削除するまでお使いの端末内に保存されます。本アプリを
@@ -673,10 +595,10 @@
       </p>
 
       <p>
-        Firebase Analytics および Google Mobile Ads SDK が処理する情報は、SDK の動作中に
+        Google Mobile Ads SDK が処理する情報は、SDK の動作中に
         ネットワークを通じて Google LLC および関連するサービス提供者へ自動的に送信される場合があります。
         また、Google およびそのサービス提供者が処理施設を運営する国で処理される場合が
-        あります。処理の目的と情報の種類は第2項および第3項に記載したとおりであり、保存期間と削除手順は、
+        あります。処理の目的と情報の種類は第2項に記載したとおりであり、保存期間と削除手順は、
         Google のポリシーおよび適用法令に従います。
       </p>
 
@@ -686,7 +608,7 @@
         案内が必要な場合は、下記のメールアドレスから開発者へお問い合わせください。
       </p>
 
-      <h3>7. 本ポリシーの変更</h3>
+      <h3>6. 本ポリシーの変更</h3>
 
       <p>
         本アプリの機能、利用する第三者サービス、または適用される法的要件が変更された場合、
@@ -694,7 +616,7 @@
         「最終更新日」を改定します。
       </p>
 
-      <h3>8. お問い合わせ</h3>
+      <h3>7. お問い合わせ</h3>
 
       <p>
         本プライバシーポリシーまたは本アプリのプライバシー保護についてご質問がある場合は、
@@ -730,43 +652,15 @@
       </p>
 
       <p>
-        Dữ liệu học tập chi tiết, bao gồm lịch sử học theo từng từ, lựa chọn trả lời,
-        thời gian phản hồi và trạng thái ghi nhớ từ, được lưu trên thiết bị của bạn và
-        không được gửi đến máy chủ của Nhà phát triển.
+        Dữ liệu học tập—bao gồm thời gian bắt đầu và kết thúc phiên học, chế độ học
+        và cấp độ HSK, số câu hỏi, câu đúng và câu sai, kết quả và thời gian trả lời theo
+        từng từ, số từ đã học hôm nay, chuỗi ngày học liên tiếp, tổng thời gian học và
+        trạng thái ghi nhớ từ—được lưu trên thiết bị để cung cấp tính năng và thống kê
+        học tập. Dữ liệu này không được gửi đến máy chủ của Nhà phát triển hoặc bất kỳ
+        dịch vụ phân tích bên ngoài nào.
       </p>
 
-      <h3>2. Thông tin phân tích sử dụng</h3>
-
-      <p>
-        Ứng dụng sử dụng Google Firebase Analytics để cải thiện tính năng và thiết kế
-        các tính năng học tập trả phí. Thông tin sử dụng tổng hợp có thể được xử lý,
-        bao gồm việc bắt đầu, hoàn thành hoặc thoát phiên học; chế độ học và cấp độ HSK;
-        số câu hỏi, câu đúng và câu sai; lượt hiển thị lời nhắc ôn lại câu sai và lựa
-        chọn nút; số từ đã học trong ngày; chuỗi ngày học và tỷ lệ ghi nhớ.
-      </p>
-
-      <p>
-        Nhà phát triển không đưa tên, địa chỉ email, số điện thoại, nội dung từ, nội
-        dung lựa chọn trả lời hoặc mã định danh từng từ vào sự kiện phân tích. Tuy nhiên,
-        Firebase SDK có thể xử lý mã định danh phiên bản cài đặt ứng dụng, thông tin thiết
-        bị và ứng dụng, vị trí gần đúng và dữ liệu chẩn đoán theo chính sách của Google.
-        Xem thêm tại
-        <a class="text-link" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Quyền riêng tư và bảo mật của Firebase</a>
-        và
-        <a class="text-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Chính sách quyền riêng tư của Google</a>.
-      </p>
-
-      <p>
-        Khi vào Ứng dụng lần đầu, người dùng sẽ được hỏi có đồng ý “Chia sẻ dữ liệu phân
-        tích học tập” hay không. Ứng dụng không thu thập dữ liệu phân tích trước khi có sự
-        đồng ý, và người dùng vẫn có thể sử dụng các tính năng học tập nếu từ chối. Người
-        dùng có thể thay đổi lựa chọn bất cứ lúc nào trong phần cài đặt. Khi tắt, việc thu
-        thập Analytics trong tương lai sẽ dừng và dữ liệu Analytics cùng mã định danh phiên
-        bản cài đặt trên thiết bị sẽ được đặt lại. Thông tin đã gửi được lưu giữ hoặc xóa
-        theo thời hạn lưu giữ của Google Analytics và chính sách của Google.
-      </p>
-
-      <h3>3. Dịch vụ quảng cáo và dịch vụ của bên thứ ba</h3>
+      <h3>2. Dịch vụ quảng cáo và dịch vụ của bên thứ ba</h3>
 
       <p>Ứng dụng sử dụng Google AdMob và Google Mobile Ads SDK để hiển thị quảng cáo.</p>
 
@@ -799,7 +693,7 @@
         <a class="text-link" href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Chính sách quảng cáo của Google</a>.
       </p>
 
-      <h3>4. Cá nhân hóa quảng cáo và lựa chọn của người dùng</h3>
+      <h3>3. Cá nhân hóa quảng cáo và lựa chọn của người dùng</h3>
 
       <p>
         Khi pháp luật hiện hành hoặc chính sách nền tảng yêu cầu, Ứng dụng sẽ xin sự
@@ -814,7 +708,7 @@
         lõi của Ứng dụng vẫn có thể sử dụng.
       </p>
 
-      <h3>5. Quyền riêng tư của trẻ em</h3>
+      <h3>4. Quyền riêng tư của trẻ em</h3>
 
       <p>
         Ứng dụng không được thiết kế chủ yếu cho trẻ em dưới 14 tuổi và Nhà phát triển
@@ -823,7 +717,7 @@
         lý để xóa thông tin.
       </p>
 
-      <h3>6. Lưu giữ, xóa và xử lý dữ liệu ở nước ngoài</h3>
+      <h3>5. Lưu giữ, xóa và xử lý dữ liệu ở nước ngoài</h3>
 
       <p>
         Dữ liệu học tập được lưu trên thiết bị cho đến khi bạn xóa Ứng dụng. Việc xóa
@@ -833,11 +727,11 @@
       </p>
 
       <p>
-        Thông tin do Firebase Analytics và Google Mobile Ads SDK xử lý có thể được tự
+        Thông tin do Google Mobile Ads SDK xử lý có thể được tự
         động truyền qua mạng đến Google LLC và các nhà cung cấp dịch vụ liên quan trong
         khi SDK hoạt động, đồng thời có thể được xử lý tại các quốc gia nơi Google và
         các nhà cung cấp dịch vụ vận hành cơ sở xử lý. Mục đích và loại dữ liệu được mô
-        tả tại Mục 2 và 3; thời hạn lưu giữ và quy trình xóa tuân theo chính sách của
+        tả tại Mục 2; thời hạn lưu giữ và quy trình xóa tuân theo chính sách của
         Google và pháp luật hiện hành.
       </p>
 
@@ -848,7 +742,7 @@
         chỉ email bên dưới.
       </p>
 
-      <h3>7. Thay đổi Chính sách này</h3>
+      <h3>6. Thay đổi Chính sách này</h3>
 
       <p>
         Chính sách quyền riêng tư này có thể được cập nhật khi tính năng của Ứng dụng,
@@ -856,7 +750,7 @@
         được đăng trên trang này và ngày “Cập nhật lần cuối” sẽ được sửa đổi.
       </p>
 
-      <h3>8. Liên hệ</h3>
+      <h3>7. Liên hệ</h3>
 
       <p>Nếu có câu hỏi về Chính sách này hoặc hoạt động bảo vệ quyền riêng tư của Ứng dụng, vui lòng liên hệ:</p>
 
@@ -887,38 +781,13 @@
       </p>
 
       <p>
-        ข้อมูลการเรียนโดยละเอียด เช่น ประวัติการเรียนของแต่ละคำ ตัวเลือกคำตอบ เวลาตอบ และสถานะ
-        การจดจำคำศัพท์ จะถูกจัดเก็บไว้ในอุปกรณ์ของคุณและไม่ถูกส่งไปยังเซิร์ฟเวอร์ของนักพัฒนา
+        ข้อมูลการเรียน ได้แก่ เวลาเริ่มและสิ้นสุดเซสชัน โหมดการเรียนและระดับ HSK จำนวนคำถาม
+        คำตอบที่ถูกและผิด ผลลัพธ์และเวลาตอบของแต่ละคำ จำนวนคำที่เรียนวันนี้ จำนวนวันที่เรียนต่อเนื่อง
+        เวลาเรียนรวม และสถานะการจดจำคำศัพท์ จะถูกจัดเก็บไว้ในอุปกรณ์เพื่อให้บริการฟังก์ชันและสถิติ
+        การเรียน ข้อมูลนี้จะไม่ถูกส่งไปยังเซิร์ฟเวอร์ของนักพัฒนาหรือบริการวิเคราะห์ภายนอกใด ๆ
       </p>
 
-      <h3>2. ข้อมูลการวิเคราะห์การใช้งาน</h3>
-
-      <p>
-        แอปใช้ Google Firebase Analytics เพื่อปรับปรุงฟีเจอร์และออกแบบฟีเจอร์การเรียนแบบชำระเงิน
-        ข้อมูลการใช้งานแบบสรุปที่อาจได้รับการประมวลผลประกอบด้วย การเริ่ม เรียนจบ หรือออกจากเซสชัน
-        การเรียน โหมดการเรียนและระดับ HSK จำนวนคำถาม คำตอบที่ถูกและผิด การแสดงคำแนะนำให้ทบทวน
-        คำตอบผิดและการเลือกปุ่ม จำนวนคำที่เรียนในวันนี้ จำนวนวันที่เรียนต่อเนื่อง และเปอร์เซ็นต์การจดจำ
-      </p>
-
-      <p>
-        นักพัฒนาไม่ใส่ชื่อ ที่อยู่อีเมล หมายเลขโทรศัพท์ ข้อความของคำศัพท์ เนื้อหาตัวเลือกคำตอบ หรือ
-        ตัวระบุของแต่ละคำไว้ในเหตุการณ์การวิเคราะห์ อย่างไรก็ตาม Firebase SDK อาจประมวลผลตัวระบุ
-        อินสแตนซ์ของแอป ข้อมูลอุปกรณ์และแอป ตำแหน่งโดยประมาณ และข้อมูลการวินิจฉัยตามนโยบายของ Google
-        โปรดดู
-        <a class="text-link" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">ความเป็นส่วนตัวและความปลอดภัยของ Firebase</a>
-        และ
-        <a class="text-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">นโยบายความเป็นส่วนตัวของ Google</a>
-      </p>
-
-      <p>
-        เมื่อเข้าใช้แอปครั้งแรก แอปจะถามว่าผู้ใช้ยินยอมให้ “แชร์ข้อมูลวิเคราะห์การเรียน” หรือไม่
-        แอปจะไม่เก็บข้อมูลการวิเคราะห์ก่อนผู้ใช้ให้ความยินยอม และผู้ใช้ยังใช้ฟีเจอร์การเรียนได้หากปฏิเสธ
-        ผู้ใช้เปลี่ยนตัวเลือกได้ทุกเมื่อในการตั้งค่าของแอป เมื่อปิดแล้ว การเก็บข้อมูล Analytics ในอนาคต
-        จะหยุดลง และข้อมูล Analytics กับตัวระบุอินสแตนซ์ของแอปในอุปกรณ์จะถูกรีเซ็ต ข้อมูลที่ส่งไปแล้ว
-        จะถูกเก็บรักษาหรือลบตามระยะเวลาการเก็บรักษาของ Google Analytics และนโยบายของ Google
-      </p>
-
-      <h3>3. บริการโฆษณาและบริการของบุคคลที่สาม</h3>
+      <h3>2. บริการโฆษณาและบริการของบุคคลที่สาม</h3>
 
       <p>แอปใช้ Google AdMob และ Google Mobile Ads SDK เพื่อแสดงโฆษณา</p>
 
@@ -949,7 +818,7 @@
         <a class="text-link" href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">นโยบายการโฆษณาของ Google</a>
       </p>
 
-      <h3>4. การปรับโฆษณาให้เหมาะกับบุคคลและตัวเลือกของผู้ใช้</h3>
+      <h3>3. การปรับโฆษณาให้เหมาะกับบุคคลและตัวเลือกของผู้ใช้</h3>
 
       <p>
         เมื่อกฎหมายที่ใช้บังคับหรือนโยบายของแพลตฟอร์มกำหนด แอปจะขอความยินยอมเกี่ยวกับการปรับ
@@ -963,7 +832,7 @@
         ฟีเจอร์การเรียนหลักของแอปต่อไปได้
       </p>
 
-      <h3>5. ความเป็นส่วนตัวของเด็ก</h3>
+      <h3>4. ความเป็นส่วนตัวของเด็ก</h3>
 
       <p>
         แอปไม่ได้ออกแบบมาโดยมุ่งเป้าไปที่เด็กอายุต่ำกว่า 14 ปี และนักพัฒนาไม่ได้ตั้งใจเก็บรวบรวม
@@ -971,7 +840,7 @@
         นักพัฒนาจะดำเนินการตามสมควรเพื่อลบข้อมูลนั้น
       </p>
 
-      <h3>6. การเก็บรักษา การลบ และการประมวลผลข้อมูลในต่างประเทศ</h3>
+      <h3>5. การเก็บรักษา การลบ และการประมวลผลข้อมูลในต่างประเทศ</h3>
 
       <p>
         ข้อมูลการเรียนจะถูกเก็บไว้ในอุปกรณ์จนกว่าคุณจะลบแอป การลบแอปจะลบข้อมูลการเรียนที่แอป
@@ -980,10 +849,10 @@
       </p>
 
       <p>
-        ข้อมูลที่ Firebase Analytics และ Google Mobile Ads SDK ประมวลผลอาจถูกส่งผ่านเครือข่าย
+        ข้อมูลที่ Google Mobile Ads SDK ประมวลผลอาจถูกส่งผ่านเครือข่าย
         โดยอัตโนมัติไปยัง Google LLC และผู้ให้บริการที่เกี่ยวข้องระหว่างที่ SDK ทำงาน และอาจได้รับ
         การประมวลผลในประเทศที่ Google และผู้ให้บริการมีสถานที่ประมวลผล วัตถุประสงค์และประเภทข้อมูล
-        ระบุไว้ในข้อ 2 และ 3 ส่วนระยะเวลาการเก็บรักษาและขั้นตอนการลบเป็นไปตามนโยบายของ Google
+        ระบุไว้ในข้อ 2 ส่วนระยะเวลาการเก็บรักษาและขั้นตอนการลบเป็นไปตามนโยบายของ Google
         และกฎหมายที่ใช้บังคับ
       </p>
 
@@ -993,7 +862,7 @@
         โปรดติดต่อนักพัฒนาทางอีเมลด้านล่าง
       </p>
 
-      <h3>7. การเปลี่ยนแปลงนโยบายนี้</h3>
+      <h3>6. การเปลี่ยนแปลงนโยบายนี้</h3>
 
       <p>
         นโยบายความเป็นส่วนตัวนี้อาจได้รับการปรับปรุงเมื่อฟีเจอร์ของแอป บริการของบุคคลที่สาม หรือ
@@ -1001,7 +870,7 @@
         “อัปเดตล่าสุด”
       </p>
 
-      <h3>8. ติดต่อ</h3>
+      <h3>7. ติดต่อ</h3>
 
       <p>หากมีคำถามเกี่ยวกับนโยบายนี้หรือแนวทางด้านความเป็นส่วนตัวของแอป โปรดติดต่อ:</p>
 
@@ -1033,42 +902,14 @@
       </p>
 
       <p>
-        Подробные учебные данные, включая историю изучения отдельных слов, выбранные ответы,
-        время ответа и статус запоминания слов, хранятся на вашем устройстве и не передаются
-        на сервер Разработчика.
+        Учебные данные, включая время начала и окончания учебной сессии, режим и уровень HSK,
+        количество вопросов, правильных и неправильных ответов, результат и время ответа по
+        каждому слову, число изученных сегодня слов, серию дней занятий, общее время обучения
+        и статус запоминания слов, хранятся на устройстве для работы учебных функций и статистики.
+        Эти данные не передаются на сервер Разработчика или во внешние аналитические сервисы.
       </p>
 
-      <h3>2. Данные об использовании и аналитика</h3>
-
-      <p>
-        Приложение использует Google Firebase Analytics для улучшения функций и разработки
-        платных учебных возможностей. Может обрабатываться агрегированная информация: начало,
-        завершение или выход из учебной сессии; режим обучения и уровень HSK; количество
-        вопросов, правильных и неправильных ответов; показ предложения повторить ошибки и
-        выбор кнопки; число изученных сегодня слов; серия дней обучения и процент запоминания.
-      </p>
-
-      <p>
-        Разработчик не включает в аналитические события имена, адреса электронной почты,
-        номера телефонов, тексты слов, содержимое вариантов ответа или идентификаторы отдельных
-        слов. Однако Firebase SDK может обрабатывать идентификатор экземпляра приложения,
-        сведения об устройстве и приложении, приблизительное местоположение и диагностические
-        данные в соответствии с политиками Google. Подробнее:
-        <a class="text-link" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Конфиденциальность и безопасность Firebase</a>
-        и
-        <a class="text-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Политика конфиденциальности Google</a>.
-      </p>
-
-      <p>
-        При первом входе Приложение запрашивает согласие на параметр «Делиться аналитикой
-        обучения». До получения согласия аналитические данные не собираются, а отказ не
-        ограничивает учебные функции. Пользователь может изменить выбор в настройках в любое
-        время. После отключения дальнейший сбор Analytics прекращается, а данные Analytics и
-        идентификатор экземпляра приложения на устройстве сбрасываются. Уже переданная информация
-        хранится или удаляется в соответствии со сроком хранения Google Analytics и политиками Google.
-      </p>
-
-      <h3>3. Реклама и сторонние сервисы</h3>
+      <h3>2. Реклама и сторонние сервисы</h3>
 
       <p>Приложение использует Google AdMob и Google Mobile Ads SDK для показа рекламы.</p>
 
@@ -1101,7 +942,7 @@
         <a class="text-link" href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">рекламные правила Google</a>.
       </p>
 
-      <h3>4. Персонализация рекламы и выбор пользователя</h3>
+      <h3>3. Персонализация рекламы и выбор пользователя</h3>
 
       <p>
         Когда этого требуют применимое законодательство или правила платформы, Приложение
@@ -1115,7 +956,7 @@
         рекламы может быть ограничен. Основные учебные функции Приложения останутся доступными.
       </p>
 
-      <h3>5. Конфиденциальность детей</h3>
+      <h3>4. Конфиденциальность детей</h3>
 
       <p>
         Приложение не предназначено преимущественно для детей младше 14 лет, и Разработчик
@@ -1123,7 +964,7 @@
         известно о таком прямом сборе, он примет разумные меры для удаления данных.
       </p>
 
-      <h3>6. Хранение, удаление и трансграничная обработка данных</h3>
+      <h3>5. Хранение, удаление и трансграничная обработка данных</h3>
 
       <p>
         Учебные данные хранятся на устройстве до удаления Приложения. При удалении Приложения
@@ -1133,10 +974,10 @@
       </p>
 
       <p>
-        Данные, обрабатываемые Firebase Analytics и Google Mobile Ads SDK, во время работы SDK
+        Данные, обрабатываемые Google Mobile Ads SDK, во время работы SDK
         могут автоматически передаваться по сети компании Google LLC и связанным поставщикам
         услуг, а также обрабатываться в странах, где Google и ее поставщики располагают
-        вычислительными мощностями. Цели и категории данных описаны в разделах 2 и 3. Сроки
+        вычислительными мощностями. Цели и категории данных описаны в разделе 2. Сроки
         хранения и процедуры удаления регулируются политиками Google и применимым законодательством.
       </p>
 
@@ -1146,7 +987,7 @@
         помощь с поиском соответствующих настроек, свяжитесь с Разработчиком по адресу ниже.
       </p>
 
-      <h3>7. Изменения настоящей Политики</h3>
+      <h3>6. Изменения настоящей Политики</h3>
 
       <p>
         Настоящая Политика может обновляться при изменении функций Приложения, сторонних сервисов
@@ -1154,7 +995,7 @@
         последнего обновления будет изменена.
       </p>
 
-      <h3>8. Контакты</h3>
+      <h3>7. Контакты</h3>
 
       <p>По вопросам о настоящей Политике или защите конфиденциальности в Приложении обращайтесь:</p>
 
@@ -1186,42 +1027,14 @@
       </p>
 
       <p>
-        Data pembelajaran terperinci, termasuk riwayat belajar per kata, pilihan jawaban, waktu
-        respons, dan status penguasaan kata, disimpan di perangkat Anda dan tidak dikirim ke
-        server Pengembang.
+        Data pembelajaran—termasuk waktu mulai dan selesai sesi belajar, mode belajar dan
+        tingkat HSK, jumlah soal, jawaban benar dan salah, hasil serta waktu respons per kata,
+        jumlah kata yang dipelajari hari ini, rangkaian hari belajar, total waktu belajar, dan
+        status penguasaan kata—disimpan di perangkat Anda untuk menyediakan fitur dan statistik
+        pembelajaran. Data ini tidak dikirim ke server Pengembang atau layanan analitik eksternal.
       </p>
 
-      <h3>2. Informasi analitik penggunaan</h3>
-
-      <p>
-        Aplikasi menggunakan Google Firebase Analytics untuk meningkatkan fitur dan merancang
-        fitur pembelajaran berbayar. Informasi penggunaan gabungan yang dapat diproses meliputi
-        dimulai, diselesaikan, atau ditinggalkannya sesi belajar; mode belajar dan tingkat HSK;
-        jumlah soal, jawaban benar, dan jawaban salah; tampilan ajakan meninjau jawaban salah dan
-        pilihan tombol; jumlah kata yang dipelajari hari ini; rentetan hari belajar; serta
-        persentase penguasaan.
-      </p>
-
-      <p>
-        Pengembang tidak menyertakan nama, alamat email, nomor telepon, teks kata, isi pilihan
-        jawaban, atau pengenal per kata dalam peristiwa analitik. Namun, Firebase SDK dapat
-        memproses pengenal instance aplikasi, informasi perangkat dan aplikasi, perkiraan lokasi,
-        serta data diagnostik berdasarkan kebijakan Google. Lihat
-        <a class="text-link" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Privasi dan Keamanan Firebase</a>
-        dan
-        <a class="text-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Kebijakan Privasi Google</a>.
-      </p>
-
-      <p>
-        Saat pertama kali masuk, Aplikasi meminta persetujuan untuk “Bagikan analitik pembelajaran”.
-        Data analitik tidak dikumpulkan sebelum persetujuan diberikan, dan penolakan tidak membatasi
-        fitur pembelajaran. Pengguna dapat mengubah pilihan kapan saja di pengaturan Aplikasi. Jika
-        dinonaktifkan, pengumpulan Analytics berikutnya dihentikan dan data Analytics serta pengenal
-        instance aplikasi pada perangkat direset. Informasi yang sudah dikirim disimpan atau dihapus
-        sesuai periode retensi Google Analytics dan kebijakan Google.
-      </p>
-
-      <h3>3. Layanan iklan dan layanan pihak ketiga</h3>
+      <h3>2. Layanan iklan dan layanan pihak ketiga</h3>
 
       <p>Aplikasi menggunakan Google AdMob dan Google Mobile Ads SDK untuk menampilkan iklan.</p>
 
@@ -1253,7 +1066,7 @@
         <a class="text-link" href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">kebijakan periklanan Google</a>.
       </p>
 
-      <h3>4. Personalisasi iklan dan pilihan pengguna</h3>
+      <h3>3. Personalisasi iklan dan pilihan pengguna</h3>
 
       <p>
         Jika diwajibkan oleh hukum yang berlaku atau kebijakan platform, Aplikasi meminta
@@ -1267,7 +1080,7 @@
         dapat dibatasi. Fitur pembelajaran utama Aplikasi tetap dapat digunakan.
       </p>
 
-      <h3>5. Privasi anak</h3>
+      <h3>4. Privasi anak</h3>
 
       <p>
         Aplikasi tidak dirancang terutama untuk anak di bawah usia 14 tahun, dan Pengembang tidak
@@ -1276,7 +1089,7 @@
         mengambil langkah yang wajar untuk menghapusnya.
       </p>
 
-      <h3>6. Retensi, penghapusan, dan pemrosesan data lintas negara</h3>
+      <h3>5. Retensi, penghapusan, dan pemrosesan data lintas negara</h3>
 
       <p>
         Data pembelajaran disimpan di perangkat hingga Anda menghapus Aplikasi. Menghapus Aplikasi
@@ -1286,10 +1099,10 @@
       </p>
 
       <p>
-        Informasi yang diproses oleh Firebase Analytics dan Google Mobile Ads SDK dapat dikirim
+        Informasi yang diproses oleh Google Mobile Ads SDK dapat dikirim
         secara otomatis melalui jaringan kepada Google LLC dan penyedia layanan terkait selama SDK
         beroperasi, serta dapat diproses di negara tempat Google dan penyedia layanannya menjalankan
-        fasilitas pemrosesan. Tujuan dan kategori data dijelaskan dalam Bagian 2 dan 3. Periode
+        fasilitas pemrosesan. Tujuan dan kategori data dijelaskan dalam Bagian 2. Periode
         retensi dan prosedur penghapusan mengikuti kebijakan Google dan hukum yang berlaku.
       </p>
 
@@ -1299,7 +1112,7 @@
         menemukan pilihan terkait, Anda dapat menghubungi Pengembang melalui alamat email di bawah.
       </p>
 
-      <h3>7. Perubahan Kebijakan ini</h3>
+      <h3>6. Perubahan Kebijakan ini</h3>
 
       <p>
         Kebijakan Privasi ini dapat diperbarui jika fitur Aplikasi, layanan pihak ketiga, atau
@@ -1307,7 +1120,7 @@
         tanggal “Terakhir diperbarui” akan direvisi.
       </p>
 
-      <h3>8. Kontak</h3>
+      <h3>7. Kontak</h3>
 
       <p>Jika Anda memiliki pertanyaan tentang Kebijakan ini atau praktik privasi Aplikasi, hubungi:</p>
 
