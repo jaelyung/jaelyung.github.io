@@ -7,6 +7,7 @@ ROOT = Path(__file__).parent
 BASE = "https://jaelyung.github.io"
 JLPT = "https://apps.apple.com/app/id6768330065"
 HSK = "https://apps.apple.com/app/id6761183360"
+HSK_GOOGLE_PLAY = "https://play.google.com/store/apps/details?id=com.jlkim.hskpocketword"
 LOCALES = {
     "en": {
         "path": "/", "lang": "en", "label": "English",
@@ -235,7 +236,7 @@ def page(locale, d):
             {"@type": "WebPage", "@id": canonical + "#webpage", "url": canonical, "name": d["title"], "description": d["description"], "inLanguage": d["lang"], "isPartOf": {"@id": BASE + "/#website"}, "about": [{"@id": BASE + "/#jlpt"}, {"@id": BASE + "/#hsk"}]},
             {"@type": "WebSite", "@id": BASE + "/#website", "name": "Pocket Word", "url": BASE + "/", "publisher": {"@id": BASE + "/#organization"}, "inLanguage": list(LOCALES)},
             {"@type": "SoftwareApplication", "@id": BASE + "/#jlpt", "name": d["jlpt_name"], "alternateName": "JLPT Pocket Word", "applicationCategory": "EducationalApplication", "operatingSystem": "iOS", "url": JLPT, "downloadUrl": JLPT, "image": BASE + "/jlpt-pocket-word.png", "screenshot": [f"{BASE}/images/{image_locale}/{i}.webp" for i in range(1, 7)], "description": d["jlpt_copy"], "publisher": {"@id": BASE + "/#organization"}},
-            {"@type": "SoftwareApplication", "@id": BASE + "/#hsk", "name": "HSK Pocket Word", "applicationCategory": "EducationalApplication", "operatingSystem": "iOS", "url": HSK, "downloadUrl": HSK, "image": BASE + "/hsk-pocket-word.png", "screenshot": [f"{BASE}/images/hsk/{hsk_image_locale}/{i}.webp" for i in range(1, 6)], "description": d["hsk_copy"], "publisher": {"@id": BASE + "/#organization"}},
+            {"@type": "SoftwareApplication", "@id": BASE + "/#hsk", "name": "HSK Pocket Word", "applicationCategory": "EducationalApplication", "operatingSystem": "iOS, Android", "url": HSK, "downloadUrl": [HSK, HSK_GOOGLE_PLAY], "image": BASE + "/hsk-pocket-word.png", "screenshot": [f"{BASE}/images/hsk/{hsk_image_locale}/{i}.webp" for i in range(1, 6)], "description": d["hsk_copy"], "publisher": {"@id": BASE + "/#organization"}},
         ],
     }
     ld = json.dumps(graph, ensure_ascii=False).replace("<", "\\u003c")
@@ -292,7 +293,7 @@ def page(locale, d):
       <div class="section-head"><div class="eyebrow">{e(d['apps_eyebrow'])}</div><h2>{e(d['apps_title'])}</h2><p>{e(d['apps_intro'])}</p></div>
       <div class="app-grid">
         <article class="app-card"><div class="app-card-head"><img src="/jlpt-pocket-word.png" width="66" height="66" loading="lazy" alt=""><h3>{e(d['jlpt_name'])}</h3></div><p>{e(d['jlpt_copy'])}</p><a class="button secondary" href="{JLPT}" target="_blank" rel="noopener noreferrer">{e(d['app_cta'])} <span aria-hidden="true">↗</span></a></article>
-        <article class="app-card"><div class="app-card-head"><img src="/hsk-pocket-word.png" width="66" height="66" loading="lazy" alt=""><h3>{e(d['hsk_name'])}</h3></div><p>{e(d['hsk_copy'])}</p><a class="button secondary" href="{HSK}" target="_blank" rel="noopener noreferrer">{e(d['app_cta'])} <span aria-hidden="true">↗</span></a></article>
+        <article class="app-card"><div class="app-card-head"><img src="/hsk-pocket-word.png" width="66" height="66" loading="lazy" alt=""><h3>{e(d['hsk_name'])}</h3></div><p>{e(d['hsk_copy'])}</p><a class="button secondary" href="{HSK}" target="_blank" rel="noopener noreferrer">{e(d['app_cta'])} <span aria-hidden="true">↗</span></a><a class="button secondary" href="{HSK_GOOGLE_PLAY}" target="_blank" rel="noopener noreferrer">Google Play <span aria-hidden="true">↗</span></a></article>
       </div>
     </div></section>
     <section class="faq-section"><div class="wrap">
