@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "3XBN996KK2.com.jlkim.Oneul-MVP"
+        ],
+        "components": [
+          {
+            "/": "/record"
+          },
+          {
+            "/": "/record/"
+          }
+        ]
+      }
+    ]
+  }
+}
